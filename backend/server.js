@@ -5,17 +5,16 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
-
-// Middleware for JSON
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error:', err));
+
+/*, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}*/
 
 // Main route (test)
 app.get('/', (req, res) => {
@@ -24,6 +23,22 @@ app.get('/', (req, res) => {
 
 // User endpoints
 app.use('/api/users', userRoutes);
+
+
+const gigRoutes = require('./routes/gigRoutes');
+app.use('/api/gigs', gigRoutes);
+
+const applicationRoutes = require('./routes/applicationRoutes');
+app.use('/api/applications', applicationRoutes);
+
+const messageRoutes = require('./routes/messageRoutes');
+app.use('/api/messages', messageRoutes);
+
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../public')));
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
