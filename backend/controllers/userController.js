@@ -43,13 +43,11 @@ exports.loginUser = async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
     
-    // Compare provided password with hashed password in DB
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ message: "Invalid email or password" });
     }
     
-    // If authentication successful, return user data and JWT token
     res.json({
       _id: user._id,
       name: user.name,
@@ -59,5 +57,13 @@ exports.loginUser = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
+  }
+};
+
+exports.getMe = async (req, res) => {
+  try {
+    res.json(req.user);
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
   }
 };

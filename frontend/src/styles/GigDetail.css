@@ -1,0 +1,148 @@
+.gigdetail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+}
+
+/* Card Layout */
+.gigdetail-card {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Header */
+.gigdetail-header h1 {
+  font-size: 1.8rem;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.gig-category {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* Body */
+.gigdetail-body {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gig-description {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.gig-price {
+  font-size: 1.1rem;
+  color: #16a34a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Footer */
+.gigdetail-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.apply-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #1e40af;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Apply message */
+.apply-message {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gigdetail-card {
+    margin: 0 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .gigdetail-header h1 {
+    font-size: 1.4rem;
+  }
+}

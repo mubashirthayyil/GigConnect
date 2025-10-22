@@ -3,7 +3,8 @@ const { applyToGig, getApplications } = require('../controllers/applicationContr
 const { protect } = require('../middleware/authMiddleware');
 const router = express.Router();
 
-router.post('/apply', protect, applyToGig);
+//router.post('/apply', protect, applyToGig);
 router.get('/:gigId/applications', protect, getApplications);
+router.post('/gigs/:gigId/apply', protect, applyToGig);
 
 module.exports = router;
