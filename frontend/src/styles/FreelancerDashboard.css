@@ -1,0 +1,66 @@
+.freelancer-dashboard {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1e2a47;
+  margin-bottom: 40px;
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.action-card {
+  flex: 1 1 220px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  min-width: 250px;
+  border-top: 4px solid #00aaff;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+  background: #f4fbff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.action-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.action-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.logout-card {
+  background: #fff3f3;
+  border-top: 4px solid #ff4d4d;
+}
+
+.logout-card h3 {
+  color: #d93025;
+}
+
+.logout-card:hover {
+  background: #ffe5e5;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.18);
+}
