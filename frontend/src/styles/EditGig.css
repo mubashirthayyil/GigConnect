@@ -1,0 +1,142 @@
+.editgig-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #283e51, #485563);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+}
+
+/* Card */
+.editgig-card {
+  background: #fff;
+  padding: 2.8rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Titles */
+.editgig-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+}
+
+.editgig-subtitle {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Error box */
+.error-box {
+  background: #ffe1e1;
+  color: #c53030;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Form */
+.editgig-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Buttons */
+.update-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.update-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+}
+
+.back-btn {
+  background: transparent;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .editgig-card {
+    margin: 0 1rem;
+    padding: 2rem 1.5rem;
+  }
+}

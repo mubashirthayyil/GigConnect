@@ -1,0 +1,144 @@
+.gigs-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526, #414345);
+  padding: 2rem;
+  color: #1f2937;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Section */
+.gigs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.gigs-header h1 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Gig list and cards */
+.gig-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gig-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gig-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Gig Content */
+.gig-title {
+  font-size: 1.2rem;
+  color: #2563eb;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.gig-title:hover {
+  color: #1e40af;
+}
+
+.gig-desc {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+}
+
+.gig-price {
+  font-weight: 600;
+  color: #16a34a;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.gig-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn,
+.delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #1e40af;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Error / Empty */
+.error-box {
+  background: #ffe1e1;
+  color: #c53030;
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.no-gigs {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gigs-container {
+    padding: 1.2rem;
+  }
+}
